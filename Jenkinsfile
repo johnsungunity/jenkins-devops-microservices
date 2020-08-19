@@ -53,7 +53,7 @@ pipeline {
 				steps {
 					//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
 					script {
-						dockerImage = docker.build(" johnsungunity/jenkins-devops-microservices:${env.BUILD_TAG}")
+						dockerImage = docker.build("johnsungunity/jenkins-devops-microservices:${env.BUILD_TAG}")
 					}
 				}
 		}
@@ -62,11 +62,11 @@ pipeline {
 				steps {
 					script {
 						docker.withRegistry('','dockerhub') { 
-						dockerImage.push();
+						dockerImage.push('docker.io/jkvsung/jenkins-devops-microservices');
 						dockerImage.push('latest');
-					}
-				}
-			}
+						}
+							}
+						}
 		}
 			
 	}
