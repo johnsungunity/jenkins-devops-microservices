@@ -62,7 +62,7 @@ pipeline {
 				steps {
 					script {
 						docker.withRegistry('','dockerhub') { 
-						dockerImage.push('docker.io/jkvsung/jenkins-devops-microservices');
+						dockerImage.push('');
 						dockerImage.push('latest');
 						}
 							}
