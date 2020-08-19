@@ -62,9 +62,9 @@ pipeline {
 				steps {
 					script {
 						docker.withRegistry('', '890dff09-2071-42b1-bb25-79062e306720') { 
-							dockerImage.push('');
+							dockerImage.push();
 							dockerImage.push('latest');
-						}
+							}
 							}
 						}
 		}
