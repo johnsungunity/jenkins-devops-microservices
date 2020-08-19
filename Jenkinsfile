@@ -25,7 +25,7 @@ pipeline {
 
 	post {
 		always {
-			echo 'always run'
+			echo 'I always run'
 		}
 		success {
 			echo 'success'
